@@ -385,9 +385,9 @@ def clean_xml(xml):
 
     records = root.find('ListRecords')
     if records is None:
-        records = root.find('GetRecords')
+        records = root.find('GetRecord')
     if records is None:
-        raise ValueError("Cannot find ListRecords or GetRecords!")
+        raise ValueError("Cannot find ListRecords or GetRecord!")
 
     return ET.ElementTree(records), element_tree_oai_to_records, header_subs
 
